@@ -85,6 +85,16 @@ export default function Footer() {
                 <ArrowUpRight size={12} />
               </button>
             </div>
+            <div>
+              <button
+                type="button"
+                onClick={() => triggerDemo("ShopeeFood")}
+                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors cursor-pointer"
+              >
+                <span>ShopeeFood (Demo)</span>
+                <ArrowUpRight size={12} />
+              </button>
+            </div>
             {demoToast && (
               <p className="text-[11px] text-[#E5B210] pt-1">{demoToast}</p>
             )}

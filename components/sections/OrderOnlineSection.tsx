@@ -48,6 +48,14 @@ export default function OrderOnlineSection() {
                 <span>GrabFood (Demo)</span>
                 <ArrowUpRight size={12} className="text-[#737373]" />
               </button>
+              <button
+                type="button"
+                onClick={() => handleDemoClick("ShopeeFood")}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#E8E4DC] hover:border-[#1F3D17] text-xs font-body uppercase tracking-wider text-[#1A1A1A] transition-colors cursor-pointer"
+              >
+                <span>ShopeeFood (Demo)</span>
+                <ArrowUpRight size={12} className="text-[#737373]" />
+              </button>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=Halo%20Bumi%20Semboja%2C%20saya%20ingin%20pesan%20takeaway.`}
                 target="_blank"

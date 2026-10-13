@@ -497,9 +497,8 @@ export const signatureItems: MenuItem[] = menuCategories
 
 export const WHATSAPP_NUMBER = '6285215585856'
 export const INSTAGRAM_URL = 'https://www.instagram.com/bumisemboja/'
-export const GOFOOD_URL = 'https://gofood.link/a/MKqgZTw'
-export const GRABFOOD_URL =
-  'https://r.grab.com/g/6-20240830_005111_315ABF964665460387FE07DDB603BC13_MEXMPS-6-C6VDUALTTLECLT'
+export const GOFOOD_URL = '#demo-gofood'
+export const GRABFOOD_URL = '#demo-grabfood'
 export const MAPS_EMBED_URL =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.543!2d106.7849026!3d-6.5908706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c538febe8d93%3A0x768334810bb57934!2sBumi%20Semboja%20%7C%20Resto%20Bogor!5e0!3m2!1sid!2sid'
 export const MAPS_LINK = 'https://maps.app.goo.gl/BumiSembojaBogor'

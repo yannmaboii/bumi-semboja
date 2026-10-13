@@ -1,10 +1,17 @@
 "use client";
 
-import { WHATSAPP_NUMBER, INSTAGRAM_URL, GOFOOD_URL, GRABFOOD_URL } from "@/lib/menu-data";
+import { useState } from "react";
+import { WHATSAPP_NUMBER, INSTAGRAM_URL } from "@/lib/menu-data";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const currentYear = 2026;
+  const [demoToast, setDemoToast] = useState<string | null>(null);
+
+  const triggerDemo = (name: string) => {
+    setDemoToast(`Tautan ${name} berada dalam mode demo pratinjau.`);
+    setTimeout(() => setDemoToast(null), 3500);
+  };
 
   return (
     <footer className="bg-[#141A13] text-[#FAF8F5] pt-20 pb-12 border-t border-[#1F3D17]">
@@ -59,33 +66,34 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <a
-                href={GOFOOD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
+              <button
+                type="button"
+                onClick={() => triggerDemo("GoFood")}
+                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors cursor-pointer"
               >
-                <span>GoFood</span>
+                <span>GoFood (Demo)</span>
                 <ArrowUpRight size={12} />
-              </a>
+              </button>
             </div>
             <div>
-              <a
-                href={GRABFOOD_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors"
+              <button
+                type="button"
+                onClick={() => triggerDemo("GrabFood")}
+                className="inline-flex items-center gap-1.5 text-white/60 hover:text-white transition-colors cursor-pointer"
               >
-                <span>GrabFood</span>
+                <span>GrabFood (Demo)</span>
                 <ArrowUpRight size={12} />
-              </a>
+              </button>
             </div>
+            {demoToast && (
+              <p className="text-[11px] text-[#E5B210] pt-1">{demoToast}</p>
+            )}
           </div>
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-body text-white/40">
           <p>© {currentYear} Bumi Semboja | Resto Bogor. Hak cipta dilindungi undang-undang.</p>
-          <p>Disusun dengan prinsip desain minimalis murni.</p>
+          <p>Versi Pratinjau (Demo) — Dirancang oleh Muhamad Ryan Febriansyah</p>
         </div>
       </div>
     </footer>
